@@ -1,290 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marina Valérielle | Ultra-Luxury Private Yacht & Island Sanctuary</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --navy: #0A192F;
-            --ocean-blue: #0077B6;
-            --sky-blue: #90E0EF;
-            --gold: #D4AF37;
-            --white: #FFFFFF;
-            --off-white: #F8F9FA;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: var(--navy);
-            color: var(--white);
-            overflow-x: hidden;
-        }
-
-        h1, h2, h3, .luxury-font {
-            font-family: 'Playfair Display', serif;
-        }
-
-        /* Header / Navbar */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 25px 8%;
-            background: rgba(10, 25, 47, 0.95);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            color: var(--gold);
-            letter-spacing: 2px;
-            font-weight: 700;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 40px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: var(--white);
-            font-size: 0.9rem;
-            letter-spacing: 1px;
-            transition: color 0.3s ease;
-        }
-
-        nav ul li a:hover {
-            color: var(--gold);
-        }
-
-        .cta-btn {
-            background: transparent;
-            border: 1px solid var(--gold);
-            color: var(--gold);
-            padding: 10px 25px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-size: 0.85rem;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
-        }
-
-        .cta-btn:hover {
-            background: var(--gold);
-            color: var(--navy);
-        }
-
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(10, 25, 47, 0.4), rgba(10, 25, 47, 0.7)), url('https://images.unsplash.com/photo-1569263979104-865ab9cd8d5c?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 0 20px;
-        }
-
-        .hero h1 {
-            font-size: 3.8rem;
-            color: var(--white);
-            margin-bottom: 20px;
-            letter-spacing: 1px;
-        }
-
-        .hero h1 span {
-            color: var(--gold);
-        }
-
-        .hero p {
-            font-size: 1.1rem;
-            max-width: 600px;
-            color: var(--sky-blue);
-            margin-bottom: 40px;
-            font-weight: 300;
-            line-height: 1.6;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 20px;
-        }
-
-        .btn-primary {
-            background: var(--gold);
-            color: var(--navy);
-            padding: 14px 35px;
-            text-decoration: none;
-            font-weight: 600;
-            letter-spacing: 1px;
-            border-radius: 4px;
-            transition: transform 0.3s ease;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-        }
-
-        /* Fleet Section */
-        .fleet {
-            padding: 100px 8%;
-            background: #081221;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-title h2 {
-            font-size: 2.5rem;
-            color: var(--gold);
-            margin-bottom: 10px;
-        }
-
-        .section-title p {
-            color: var(--sky-blue);
-            font-size: 0.95rem;
-            letter-spacing: 1px;
-        }
-
-        .fleet-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-        }
-
-        .fleet-card {
-            background: var(--navy);
-            border: 1px solid rgba(212, 175, 55, 0.2);
-            border-radius: 8px;
-            overflow: hidden;
-            transition: transform 0.3s ease;
-        }
-
-        .fleet-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--gold);
-        }
-
-        .fleet-img {
-            height: 240px;
-            background-size: cover;
-            background-position: center;
-        }
-
-        .fleet-info {
-            padding: 25px;
-        }
-
-        .fleet-info h3 {
-            font-size: 1.4rem;
-            margin-bottom: 10px;
-        }
-
-        .fleet-info p {
-            color: #A0AEC0;
-            font-size: 0.9rem;
-            margin-bottom: 20px;
-            line-height: 1.5;
-        }
-
-        .price {
-            color: var(--gold);
-            font-weight: 600;
-            font-size: 1.1rem;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 40px;
-            background: var(--navy);
-            border-top: 1px solid rgba(212, 175, 55, 0.1);
-            color: #718096;
-            font-size: 0.85rem;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#07182b" />
+  <meta name="description" content="Marina Valérielle — private yacht charters, secluded island escapes, and extraordinary journeys at sea." />
+  <title>Marina Valérielle — Beyond the Blue</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div class="announcement">PRIVATE YACHTS · PRIVATE ISLANDS · EXCEPTIONAL JOURNEYS</div>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Marina Valérielle home">
+      <span class="brand-mark">MV</span>
+      <span class="brand-name">MARINA <b>VALÉRIELLE</b><small>THE ART OF ESCAPE</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+    <nav class="main-nav" id="mainNav">
+      <a href="#collection">Yacht Collection</a><a href="#island">Private Island</a><a href="#experiences">Experiences</a><a href="#story">Our Philosophy</a>
+      <a class="nav-cta" href="#reservations">Plan Your Escape <span>↗</span></a>
+    </nav>
+  </header>
 
-    <!-- Header -->
-    <header>
-        <div class="logo">MARINA VALÉRIELLE</div>
-        <nav>
-            <ul>
-                <li><a href="#">The Fleet</a></li>
-                <li><a href="#">Private Islands</a></li>
-                <li><a href="#">Experiences</a></li>
-                <li><a href="#">Concierge</a></li>
-            </ul>
-        </nav>
-        <a href="#" class="cta-btn">Book Charter</a>
-    </header>
-
-    <!-- Hero Section -->
+  <main>
     <section class="hero">
-        <h1>Redefining Opulence on the <span>Open Azure</span></h1>
-        <p>สัมผัสประสบการณ์ล่องเรือยอร์ชระดับ Ultra-Luxury และเกาะส่วนตัวสุดเอ็กซ์คลูซีฟ ออกแบบมาเพื่อคุณโดยเฉพาะ</p>
-        <div class="hero-buttons">
-            <a href="#" class="btn-primary">Explore Fleet</a>
-            <a href="#" class="cta-btn" style="padding: 14px 35px;">Private Consultation</a>
-        </div>
+      <div class="hero-image"></div><div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow"><span></span> A WORLD BEYOND THE ORDINARY <span></span></p>
+        <h1>Beyond the Blue.<br><em>Beyond the Ordinary.</em></h1>
+        <p class="hero-copy">A private world of crystalline waters, considered luxury, and journeys made entirely your own.</p>
+        <div class="hero-actions"><a class="button button-gold" href="#collection">Discover the Collection <span>↗</span></a><a class="text-link" href="#experiences">Explore experiences <span>↓</span></a></div>
+      </div>
+      <div class="hero-bottom"><span>CURATED SEA JOURNEYS</span><span class="scroll-note"><i></i> SCROLL TO DISCOVER</span><span>06° 18′ N — 72° 54′ E</span></div>
+      <div class="hero-seal"><span>EST.</span><b>MMXXVI</b><span>EXCEPTIONAL BY NATURE</span></div>
     </section>
 
-    <!-- Fleet Section -->
-    <section class="fleet">
-        <div class="section-title">
-            <h2>Our Exquisite Fleet</h2>
-            <p>CRUISE IN UNMATCHED ELEGANCE</p>
-        </div>
-        <div class="fleet-grid">
-            <div class="fleet-card">
-                <div class="fleet-img" style="background-image: url('https://images.unsplash.com/photo-1569263979104-865ab9cd8d5c?auto=format&fit=crop&w=800&q=80');"></div>
-                <div class="fleet-info">
-                    <h3>Valérielle Royale (130ft)</h3>
-                    <p>ซูเปอร์ยอร์ชระดับเรือธง พร้อมทีมงานบริการส่วนตัว 8 ตำแหน่ง เหมาะสำหรับปาร์ตี้หรือทริปผู้บริหารระดับสูง</p>
-                    <div class="price">From $65,000 / Day</div>
-                </div>
-            </div>
-            <div class="fleet-card">
-                <div class="fleet-img" style="background-image: url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80');"></div>
-                <div class="fleet-info">
-                    <h3>Azure Elegance (95ft)</h3>
-                    <p>เรือยอร์ชความเร็วสูงดีไซน์โฉบเฉี่ยว ท่องเที่ยวเกาะสวรรค์ได้อย่างคล่องตัวและหรูหราสูงสุด</p>
-                    <div class="price">From $38,000 / Day</div>
-                </div>
-            </div>
-            <div class="fleet-card">
-                <div class="fleet-img" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80');"></div>
-                <div class="fleet-info">
-                    <h3>Private Island Retreat</h3>
-                    <p>สัมผัสความเป็นส่วนตัวขั้นสุดบนเกาะส่วนตัวน้ำใส หาดทรายขาวละเอียด พร้อมวิลล่าหรูระดับมิชลินเชฟ</p>
-                    <div class="price">From $95,000 / Night</div>
-                </div>
-            </div>
-        </div>
+    <section class="intro section-pad" id="story">
+      <div class="section-kicker">01 / THE VALÉRIELLE WAY</div>
+      <div class="intro-grid"><h2>Not simply a destination.<br><em>A feeling that stays.</em></h2><div class="intro-text"><p>Some journeys are measured in miles. The extraordinary ones are measured in moments — the quiet of a hidden lagoon, a table set beneath the stars, the freedom to follow the horizon.</p><p>At Marina Valérielle, every detail is considered and every itinerary begins with you.</p><a class="underlined-link" href="#experiences">The art of escape <span>↗</span></a></div></div>
+      <div class="stat-strip"><div><strong>01—01</strong><span>YOUR JOURNEY, YOURS ALONE</span></div><div><strong>24/7</strong><span>DEDICATED CONCIERGE</span></div><div><strong>∞</strong><span>WAYS TO EXPERIENCE THE SEA</span></div></div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Marina Valérielle. All Rights Reserved. Designed for Ultra-Luxury Experiences.</p>
-    </footer>
+    <section class="collection section-pad" id="collection">
+      <div class="section-heading"><div><div class="section-kicker">02 / THE FLEET</div><h2>Made for the <em>horizon.</em></h2></div><p>From sunlit day charters to nights anchored in a secluded bay, find the vessel that feels like yours.</p></div>
+      <div class="filter-row" role="group" aria-label="Filter yacht collection"><button class="filter active" data-filter="all">All vessels</button><button class="filter" data-filter="day">Day charters</button><button class="filter" data-filter="overnight">Overnight</button><button class="filter" data-filter="event">Celebrations</button></div>
+      <div class="yacht-grid">
+        <article class="yacht-card" data-type="day"><div class="card-image img-azure"><span class="image-label">THE SIGNATURE DAY CHARTER</span><button class="save-btn" aria-label="Save Azure Escape">♡</button></div><div class="card-body"><div class="card-meta"><span>MV · 01</span><span>UP TO 10 GUESTS</span></div><h3>Azure Escape</h3><p>A sun-drenched day of turquoise coves, thoughtful service, and effortless discovery.</p><div class="card-foot"><span>From <b>฿185,000</b> <small>/ charter</small></span><a href="#reservations" data-service="Azure Escape">Enquire ↗</a></div></div></article>
+        <article class="yacht-card" data-type="day"><div class="card-image img-golden"><span class="image-label">GOLDEN-HOUR SAILING</span><button class="save-btn" aria-label="Save Golden Horizon">♡</button></div><div class="card-body"><div class="card-meta"><span>MV · 02</span><span>UP TO 8 GUESTS</span></div><h3>Golden Horizon</h3><p>Follow the last light into an evening of fine dining and cinematic sea views.</p><div class="card-foot"><span>From <b>฿98,000</b> <small>/ charter</small></span><a href="#reservations" data-service="Golden Horizon">Enquire ↗</a></div></div></article>
+        <article class="yacht-card" data-type="overnight"><div class="card-image img-ocean"><span class="image-label">THE OVERNIGHT ESCAPE</span><button class="save-btn" aria-label="Save Ocean Jewel">♡</button></div><div class="card-body"><div class="card-meta"><span>MV · 03</span><span>UP TO 6 GUESTS</span></div><h3>Ocean Jewel</h3><p>A floating sanctuary for slow mornings, quiet anchorages, and open-water dreams.</p><div class="card-foot"><span>From <b>฿420,000</b> <small>/ night</small></span><a href="#reservations" data-service="Ocean Jewel Overnight">Enquire ↗</a></div></div></article>
+        <article class="yacht-card" data-type="event"><div class="card-image img-royal"><span class="image-label">PRIVATE EVENTS & GATHERINGS</span><button class="save-btn" aria-label="Save Royal Blue">♡</button></div><div class="card-body"><div class="card-meta"><span>MV · 04</span><span>UP TO 14 GUESTS</span></div><h3>Royal Blue</h3><p>An elegant setting for intimate celebrations, executive hosting, and unforgettable occasions.</p><div class="card-foot"><span>From <b>฿320,000</b> <small>/ charter</small></span><a href="#reservations" data-service="Royal Blue Business Voyage">Enquire ↗</a></div></div></article>
+      </div>
+      <p class="fine-print">All prices are illustrative, in Thai baht, and subject to itinerary, season, availability, and final confirmation.</p>
+    </section>
 
+    <section class="island-feature" id="island"><div class="island-photo"></div><div class="island-panel"><div class="section-kicker">03 / YOUR PRIVATE PARADISE</div><p class="serif-label">A world of your own</p><h2>Pearl Lagoon<br><em>Island Retreat.</em></h2><p>Where pale sand meets glass-clear water, discover a slower rhythm. Private villa living, chef-led dining, hidden snorkeling spots, and a harbor that welcomes you home.</p><ul class="feature-list"><li><span>01</span> Secluded island villas</li><li><span>02</span> Private chef & bespoke dining</li><li><span>03</span> Curated ocean experiences</li></ul><div class="island-price">A private escape from <b>฿245,000</b> <small>/ experience</small></div><a class="button button-outline" href="#reservations" data-service="Pearl Lagoon Island Retreat">Enquire about the island <span>↗</span></a></div></section>
+
+    <section class="experiences section-pad" id="experiences"><div class="section-heading"><div><div class="section-kicker">04 / MOMENTS, MADE PERSONAL</div><h2>Choose your <em>own blue.</em></h2></div><p>Tell us how you want to feel. We will take care of the rest.</p></div><div class="experience-grid"><a class="experience exp-one" href="#reservations" data-service="The Castaway"><span>01 / DISCOVER</span><h3>The Castaway</h3><p>Secret coves · Snorkeling · Open water</p><b>Explore ↗</b></a><a class="experience exp-two" href="#reservations" data-service="Golden Hour Dining"><span>02 / SAVOUR</span><h3>Golden Hour</h3><p>Chef-led dining · Sunset · Champagne-style service</p><b>Explore ↗</b></a><a class="experience exp-three" href="#reservations" data-service="The Celebration"><span>03 / CELEBRATE</span><h3>The Celebration</h3><p>Milestones · Private events · Beautiful details</p><b>Explore ↗</b></a></div></section>
+
+    <section class="quote-band"><div class="quote-mark">“</div><blockquote>Luxury is not what surrounds you.<br>It is how <em>effortlessly you feel yourself.</em></blockquote><span>THE VALÉRIELLE PHILOSOPHY</span></section>
+
+    <section class="reservation section-pad" id="reservations"><div class="reservation-intro"><div class="section-kicker">05 / BEGIN YOUR JOURNEY</div><h2>Your horizon<br>is <em>waiting.</em></h2><p>Every remarkable journey begins with a conversation. Share a few details and our concierge will help shape your private escape.</p><div class="concierge-note"><span class="concierge-icon">✳</span><div><b>A personal touch, always.</b><p>Our concierge is here to tailor the details around you.</p></div></div><div class="contact-details"><span>PRIVATE CONCIERGE</span><a href="mailto:concierge@marinavalerielle.example">concierge@marinavalerielle.example</a><small>Illustrative contact for this demo website</small></div></div>
+      <form class="booking-form" id="bookingForm"><div class="form-heading"><span>YOUR PRIVATE ENQUIRY</span><span>NO. 001 — MV</span></div><div class="form-row"><label>First name<input name="firstName" autocomplete="given-name" required placeholder="Your first name"></label><label>Last name<input name="lastName" autocomplete="family-name" required placeholder="Your last name"></label></div><label>Email address<input name="email" type="email" autocomplete="email" required placeholder="you@example.com"></label><div class="form-row"><label>Preferred experience<select name="service" id="serviceSelect" required><option value="">Select an experience</option><option>Azure Escape</option><option>Golden Horizon</option><option>Ocean Jewel Overnight</option><option>Royal Blue Business Voyage</option><option>Pearl Lagoon Island Retreat</option><option>The Castaway</option><option>Golden Hour Dining</option><option>The Celebration</option><option>Not sure yet</option></select></label><label>Guests<select name="guests" required><option value="">Select</option><option>1–2 guests</option><option>3–6 guests</option><option>7–10 guests</option><option>11+ guests</option></select></label></div><div class="form-row"><label>Preferred date<input name="date" type="date" id="dateInput"></label><label>Destination<input name="destination" placeholder="e.g. Maldives, Thailand"></label></div><label>Tell us about your journey<textarea name="message" rows="3" placeholder="A special occasion, preferred itinerary, or anything we should know..."></textarea></label><label class="consent"><input type="checkbox" required> <span>I understand this is a demonstration website and this enquiry will not be sent to a real booking team.</span></label><button class="button button-gold submit-button" type="submit">Prepare my enquiry <span>↗</span></button><p class="form-note">Your details stay in this browser demo. No payment is collected.</p><div class="form-result" id="formResult" role="status" aria-live="polite" hidden></div></form>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="footer-top"><a class="brand footer-brand" href="#top"><span class="brand-mark">MV</span><span class="brand-name">MARINA <b>VALÉRIELLE</b><small>THE ART OF ESCAPE</small></span></a><p>Beyond the Blue.<br><em>Beyond the Ordinary.</em></p><a class="back-top" href="#top">BACK TO TOP ↑</a></div><div class="footer-bottom"><span>© 2026 MARINA VALÉRIELLE · CONCEPT BRAND</span><span>PRIVATE YACHTS · PRIVATE ISLANDS</span><span>ALL JOURNEYS, THOUGHTFULLY CONSIDERED.</span></div><p class="disclaimer">Marina Valérielle is a fictional concept brand created for a project. Prices, services, contact details, and imagery are illustrative. External image and font links require an internet connection.</p></footer>
+  <script src="script.js"></script>
 </body>
 </html>
